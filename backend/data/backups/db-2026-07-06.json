@@ -1,0 +1,27 @@
+{
+  "shops": [],
+  "users": [
+    {
+      "id": "31a978b8-1617-4378-9026-3771dac63ce3",
+      "shopId": null,
+      "name": "Platforma admin",
+      "phone": "superadmin",
+      "passwordHash": "$2a$10$2MsOvGxd1cOd5YxQb0xOAO.hFec5x0dFO6GvnP3Qs4LdXCCyBofDm",
+      "role": "superadmin",
+      "createdAt": 1783346216948
+    }
+  ],
+  "products": [],
+  "sales": [],
+  "customers": [],
+  "returns": [],
+  "expenses": [],
+  "branches": [],
+  "shifts": [],
+  "suppliers": [],
+  "invoices": [],
+  "chatIds": [],
+  "audits": [],
+  "transfers": [],
+  "activity": []
+}

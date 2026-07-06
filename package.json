@@ -1,0 +1,13 @@
+{
+  "name": "chaqmoq",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chaqmoq — offline-first multi-tenant POS SaaS",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build && cd ../backend && npm install",
+    "start": "cd backend && node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
