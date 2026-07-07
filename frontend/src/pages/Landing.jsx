@@ -1,5 +1,5 @@
 import { Link, useNavigate } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useAuth } from "../auth.jsx";
 import { TELEGRAM } from "../utils.js";
 
@@ -26,8 +26,10 @@ export default function Landing() {
           </Link>
           <nav className="lnav-links">
             <a href="#imkoniyatlar">Imkoniyatlar</a>
+            <a href="#ekran">Ekran</a>
             <a href="#taqqoslash">Taqqoslash</a>
             <a href="#narx">Narxlar</a>
+            <a href="#faq">FAQ</a>
           </nav>
           <div className="lnav-cta">
             <Link to="/login" className="btn ghost">Kirish</Link>
@@ -103,6 +105,77 @@ export default function Landing() {
         </div>
       </section>
 
+      {/* Screenshots — device mockups of the actual panel */}
+      <section className="section alt" id="ekran">
+        <div className="section-in">
+          <span className="eyebrow center">Ichini ko'ring</span>
+          <h2 className="section-title">Panel qanday ko'rinadi</h2>
+          <p className="section-lead">Do'kon egasi va sotuvchi bir vaqtda — kompyuter, planshet va telefondan foydalana oladi.</p>
+          <div className="shots-grid">
+            <div className="shot-card">
+              <div className="shot-frame">
+                <div className="shot-tab">Sotish</div>
+                <div className="shot-body sell">
+                  <div className="s-grid">
+                    <div className="s-prod"><b>Coca-Cola</b><span>12 000</span></div>
+                    <div className="s-prod"><b>Non</b><span>5 000</span></div>
+                    <div className="s-prod"><b>Snickers</b><span>6 000</span></div>
+                    <div className="s-prod"><b>Chips</b><span>8 000</span></div>
+                  </div>
+                  <div className="s-cart">
+                    <div className="s-line"><span>Coca-Cola × 1</span><b>12 000</b></div>
+                    <div className="s-line"><span>Non × 2</span><b>10 000</b></div>
+                    <div className="s-total"><span>Jami</span><b>22 000 so'm</b></div>
+                    <div className="s-btn">Sotish</div>
+                  </div>
+                </div>
+              </div>
+              <h4>Bir bosishda chek</h4>
+              <p>Sotuvchi shtrix-kodni skanerlab, bir bosishda chek chiqaradi.</p>
+            </div>
+
+            <div className="shot-card">
+              <div className="shot-frame">
+                <div className="shot-tab">Boshqaruv paneli</div>
+                <div className="shot-body dash">
+                  <div className="d-kpis">
+                    <div className="d-kpi teal"><span>Bugun</span><b>1.4 mln</b></div>
+                    <div className="d-kpi green"><span>Foyda</span><b>420 K</b></div>
+                    <div className="d-kpi gold"><span>Sotuv</span><b>47</b></div>
+                    <div className="d-kpi anor"><span>Nasiya</span><b>85 K</b></div>
+                  </div>
+                  <div className="d-chart">
+                    <div className="d-bar" style={{ height: "35%" }}></div>
+                    <div className="d-bar" style={{ height: "55%" }}></div>
+                    <div className="d-bar" style={{ height: "42%" }}></div>
+                    <div className="d-bar" style={{ height: "78%" }}></div>
+                    <div className="d-bar" style={{ height: "62%" }}></div>
+                    <div className="d-bar" style={{ height: "88%" }}></div>
+                    <div className="d-bar tall" style={{ height: "70%" }}></div>
+                  </div>
+                </div>
+              </div>
+              <h4>Real-time ko'rish</h4>
+              <p>Direktor uydan turib har filial nima sotayotganini kuzatadi.</p>
+            </div>
+
+            <div className="shot-card">
+              <div className="shot-frame">
+                <div className="shot-tab">Filiallar</div>
+                <div className="shot-body branches">
+                  <div className="b-row"><div><b>Chilonzor</b><span>Yetakchi</span></div><div className="b-num">2.8 mln</div></div>
+                  <div className="b-row"><div><b>Yunusobod</b><span>—</span></div><div className="b-num">1.9 mln</div></div>
+                  <div className="b-row"><div><b>Sergeli</b><span>—</span></div><div className="b-num">1.4 mln</div></div>
+                  <div className="b-add">+ Filial qo'shish</div>
+                </div>
+              </div>
+              <h4>Har filialda alohida login</h4>
+              <p>Menejer faqat o'z filialini ko'radi. Direktor esa hammasini birga.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Comparison */}
       <section className="section alt" id="taqqoslash">
         <div className="section-in">
@@ -129,22 +202,74 @@ export default function Landing() {
         </div>
       </section>
 
-      {/* Pricing — time-based, arranged directly with us */}
+      {/* Pricing — clear tiers so shopkeepers can decide without asking */}
       <section className="section" id="narx">
         <div className="section-in">
           <span className="eyebrow center">Narx</span>
           <h2 className="section-title">Sodda va adolatli</h2>
           <p className="section-lead">
-            Murakkab tariflar yo'q. Biz bilan bog'lanasiz, kerakli muddatga (masalan 1, 3, 6 yoki 12 oy)
-            hisobingizni faollashtiramiz — hamma imkoniyatlar ochiq bo'ladi.
+            Yashirin to'lov yo'q. Bir marta to'lang — kerakli muddatgacha hamma imkoniyat ochiq.
           </p>
-          <div className="price-solo">
-            <div className="ps-list">
-              {["Kassa, ombor va hisobot", "Kamera bilan shtrix-kod skaner", "Nasiya, mijozlar va qarzlar", "Filiallar va foyda tahlili", "AI tahlilchi", "Barcha yangilanishlar"].map((x) => (
-                <div className="ps-item" key={x}>{x}</div>
-              ))}
+          <div className="price-tiers">
+            <div className="ptier">
+              <div className="ptier-head">
+                <span className="ptier-lbl">1 oy sinov</span>
+                <div className="ptier-price">300 <small>ming so'm</small></div>
+                <div className="ptier-per">bir marta</div>
+              </div>
+              <ul className="ptier-list">
+                <li>Barcha imkoniyatlar ochiq</li>
+                <li>Bepul o'rnatib berish</li>
+                <li>Xodimlarni o'rgatish</li>
+                <li>Telegram orqali yordam</li>
+              </ul>
+              <a href={TELEGRAM} target="_blank" rel="noreferrer" className="btn ghost block">Boshlash</a>
             </div>
-            <a href={TELEGRAM} target="_blank" rel="noreferrer" className="btn primary lg">Narxni bilish uchun bog'laning</a>
+            <div className="ptier featured">
+              <div className="ptier-badge">Ko'p tanlanadi</div>
+              <div className="ptier-head">
+                <span className="ptier-lbl">6 oy</span>
+                <div className="ptier-price">1.5 <small>mln so'm</small></div>
+                <div className="ptier-per">250 000 so'm / oy</div>
+              </div>
+              <ul className="ptier-list">
+                <li>Barcha imkoniyatlar ochiq</li>
+                <li>Bepul o'rnatib berish</li>
+                <li>Xodimlarni o'rgatish</li>
+                <li>Telegram orqali yordam</li>
+                <li><b>Chegirma: 50 ming/oy</b></li>
+              </ul>
+              <a href={TELEGRAM} target="_blank" rel="noreferrer" className="btn primary block">Boshlash</a>
+            </div>
+            <div className="ptier">
+              <div className="ptier-head">
+                <span className="ptier-lbl">12 oy</span>
+                <div className="ptier-price">2.5 <small>mln so'm</small></div>
+                <div className="ptier-per">210 000 so'm / oy</div>
+              </div>
+              <ul className="ptier-list">
+                <li>Barcha imkoniyatlar ochiq</li>
+                <li>Bepul o'rnatib berish</li>
+                <li>Xodimlarni o'rgatish</li>
+                <li>Telegram orqali yordam</li>
+                <li><b>2 oy tekin</b></li>
+              </ul>
+              <a href={TELEGRAM} target="_blank" rel="noreferrer" className="btn ghost block">Boshlash</a>
+            </div>
+          </div>
+          <p className="price-note">
+            Ikkinchi filial uchun +50%. Uchinchidan boshlab +30%. Kassa apparatura (printer, skaner) alohida.
+          </p>
+        </div>
+      </section>
+
+      {/* FAQ — the questions every shopkeeper asks first */}
+      <section className="section alt" id="faq">
+        <div className="section-in">
+          <span className="eyebrow center">Ko'p so'ralgan savollar</span>
+          <h2 className="section-title">Aniq javoblar</h2>
+          <div className="faq-list">
+            {FAQ.map((q, i) => <FaqItem key={i} q={q.q} a={q.a} />)}
           </div>
         </div>
       </section>
@@ -254,3 +379,50 @@ const COMPARE = [
   ["5 daqiqada o'rnatish", true, false],
 ];
 
+function FaqItem({ q, a }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <div className={"faq-item" + (open ? " open" : "")}>
+      <button className="faq-q" onClick={() => setOpen(!open)}>
+        <span>{q}</span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M6 9l6 6 6-6" /></svg>
+      </button>
+      {open && <div className="faq-a">{a}</div>}
+    </div>
+  );
+}
+
+const FAQ = [
+  {
+    q: "Internetsiz ishlaydimi?",
+    a: "Ha. Panel ochilgach oflaynda ham ochilaveradi. Sotuvni yozib olamiz, internet qaytganda avtomatik sinxronlanadi. Kassir uchun sotuv hech qachon to'xtamaydi.",
+  },
+  {
+    q: "Ma'lumotim yo'qolib qolmaydimi?",
+    a: "3 qatlamli himoya bor: server har yozuvda atomic write, har 10 daqiqada avtomatik zaxira, har kuni to'liq zaxira. Bundan tashqari har kun ertalab 9:00 da to'liq zaxira faylini sizga Telegram orqali jo'natamiz — telefondan har doim mavjud.",
+  },
+  {
+    q: "Kassa apparatura kerakmi?",
+    a: "Yo'q, faqat telefon yoki kompyuter bo'lsa yetadi. Shtrix-kodni telefon kamerasi bilan skanerlaymiz. Xohlasangiz USB shtrix-kod skaner (60-100 ming so'm) yoki 58mm chek printer (300-500 ming so'm) qo'shishingiz mumkin.",
+  },
+  {
+    q: "OFD (soliq) bilan bog'lanadimi?",
+    a: "Ha. sofd, mplus, myofd, solkassa provayderlari bilan integratsiya bor. O'rnatib berish paytida sizning fiskal hisobingizni ulaymiz.",
+  },
+  {
+    q: "Payme va Click bilan to'lov qabul qilamanmi?",
+    a: "Ha. Chek yakunida bir bosishda Payme yoki Click orqali to'lov havolasi yaratiladi va mijoz o'zi to'laydi. To'lov holati avtomatik yangilanadi.",
+  },
+  {
+    q: "Nechta filialim bor bo'lsa qanday ishlaydi?",
+    a: "Har filial alohida logini bilan alohida ishlaydi. Menejer faqat o'z filialining mahsulotlari va sotuvlarini ko'radi. Siz — direktor — hammasini birga yoki har filial alohida ko'rasiz. Tovarlarni filialar orasida bir bosishda o'tkazish mumkin.",
+  },
+  {
+    q: "Xodimim pulini o'ziga olib qolsa ko'rmaymanmi?",
+    a: "Ko'rasiz. Har kim, qachon, nima sotgani \"Faoliyat tarixi\" da yozilib qoladi. Katta chegirma bergan, kutilmagan vaqtda sotuv qilgan yoki ko'p qaytarish qilgan xodimlarni AI \"Shubhali sotuvlar\" bo'limida belgilaydi.",
+  },
+  {
+    q: "O'rnatib berasizmi?",
+    a: "Ha, bepul. Namangan shahri ichida borib o'zimiz o'rnatib beramiz, mahsulotlaringizni Excel'dan import qilamiz, xodimlaringizga bir soatda o'rgatamiz. Boshqa viloyatlar uchun uzoqdan yordam ko'rsatamiz (screen share orqali).",
+  },
+];

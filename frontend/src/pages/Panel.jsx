@@ -3,7 +3,6 @@ import { useEffect, useState, useCallback } from "react";
 import { useAuth } from "../auth.jsx";
 import { api } from "../api.js";
 import { fmtDate, subActive, subDaysLeft, TELEGRAM } from "../utils.js";
-import InstallButton from "../components/InstallButton.jsx";
 
 const I = {
   dash: <path d="M3 13h8V3H3v10Zm10 8h8V11h-8v10ZM3 21h8v-6H3v6ZM13 9h8V3h-8v6Z" />,
@@ -188,7 +187,6 @@ export default function Panel() {
           )}
           <div className="spacer" />
           <div className="date">{fmtDate(new Date())}</div>
-          <InstallButton />
           <div className="cashier">
             <span className="av">{initials}</span>
             {user?.name || "Sotuvchi"}

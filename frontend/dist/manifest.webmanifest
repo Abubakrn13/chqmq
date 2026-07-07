@@ -16,38 +16,23 @@
       "src": "/icon-192.png",
       "type": "image/png",
       "sizes": "192x192",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "/icon-512.png",
       "type": "image/png",
       "sizes": "512x512",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any",
       "purpose": "any"
-    },
-    {
-      "src": "/icon-maskable-192.png",
-      "type": "image/png",
-      "sizes": "192x192",
-      "purpose": "maskable"
-    },
-    {
-      "src": "/icon-maskable-512.png",
-      "type": "image/png",
-      "sizes": "512x512",
-      "purpose": "maskable"
     }
   ],
   "shortcuts": [
-    {
-      "name": "Sotish",
-      "short_name": "Sotish",
-      "description": "Yangi chek boshlash",
-      "url": "/panel/sell"
-    },
-    {
-      "name": "Bugungi sotuvlar",
-      "short_name": "Bugun",
-      "url": "/panel/today"
-    }
+    {"name": "Sotish", "short_name": "Sotish", "description": "Yangi chek boshlash", "url": "/panel/sell"},
+    {"name": "Bugungi sotuvlar", "short_name": "Bugun", "url": "/panel/today"}
   ]
 }

@@ -1,63 +1,14 @@
 {
-  "shops": [
-    {
-      "id": "c9ebdb84-55c9-4644-9b53-a5d35170963b",
-      "name": "Smart Do'kon",
-      "subscription": {
-        "status": "active",
-        "startedAt": 1783346460559,
-        "activeUntil": 1783951260559
-      },
-      "createdAt": 1783346460559,
-      "profile": {
-        "ownerName": "Abubakr Mirzaev",
-        "staffCount": 5,
-        "shopKind": "gastronom",
-        "monthlyRevenue": 20000000,
-        "hasFiscal": false,
-        "workHours": "06:00 - 24:00"
-      },
-      "profileCompletedAt": 1783346504507
-    }
-  ],
+  "shops": [],
   "users": [
     {
-      "id": "31a978b8-1617-4378-9026-3771dac63ce3",
+      "id": "c9836844-a5e3-4d84-b605-51cd218f3845",
       "shopId": null,
       "name": "Platforma admin",
       "phone": "superadmin",
-      "passwordHash": "$2a$10$2MsOvGxd1cOd5YxQb0xOAO.hFec5x0dFO6GvnP3Qs4LdXCCyBofDm",
+      "passwordHash": "$2a$10$2khZjm1.0FTIhjxgVA66ve19lcPogYS29Crx.RKP613QPg2BWkhMG",
       "role": "superadmin",
-      "createdAt": 1783346216948
-    },
-    {
-      "id": "399828d5-cfcf-410a-a154-f2083d93663e",
-      "shopId": "c9ebdb84-55c9-4644-9b53-a5d35170963b",
-      "name": "Abubakr",
-      "phone": "+998949234900",
-      "passwordHash": "$2a$10$AnYWlRC7rz7273jLFFY/eehwkntZ8nBfh.W8qLbMhMyFwopFX0C7u",
-      "role": "owner",
-      "createdAt": 1783346460800
-    },
-    {
-      "id": "47c2a6bd-18d3-4299-a483-2104bcd7cc91",
-      "shopId": "c9ebdb84-55c9-4644-9b53-a5d35170963b",
-      "branchId": "ae9f427c-a342-4c2d-8a49-963eb64cc641",
-      "name": "maqsudjon",
-      "phone": "Maqsudhon",
-      "passwordHash": "$2a$10$eZki79OBGYlj5lGYAilzbelR5YV4N1AzcX4T9JM4P6jlyeJR4aA.K",
-      "role": "cashier",
-      "createdAt": 1783346599284
-    },
-    {
-      "id": "a6e6fdac-b5bc-4ebf-96ef-1ee2775bdb9f",
-      "shopId": "c9ebdb84-55c9-4644-9b53-a5d35170963b",
-      "branchId": null,
-      "name": "abbosbek",
-      "phone": "abbosbek",
-      "passwordHash": "$2a$10$bSiJ/hnmaBk.rewYNx5C7ubNZMgevVO0bvEHEPB7FLP.e9u/0LqRe",
-      "role": "manager",
-      "createdAt": 1783346627576
+      "createdAt": 1783415041151
     }
   ],
   "products": [],
@@ -65,15 +16,7 @@
   "customers": [],
   "returns": [],
   "expenses": [],
-  "branches": [
-    {
-      "id": "ae9f427c-a342-4c2d-8a49-963eb64cc641",
-      "shopId": "c9ebdb84-55c9-4644-9b53-a5d35170963b",
-      "name": "Asosiy filial",
-      "address": "",
-      "createdAt": 1783346460800
-    }
-  ],
+  "branches": [],
   "shifts": [],
   "suppliers": [],
   "invoices": [],
