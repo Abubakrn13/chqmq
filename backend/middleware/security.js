@@ -31,6 +31,8 @@ module.exports = function security(req, res, next) {
     [
       "default-src 'self'",
       "script-src 'self'",
+      "worker-src 'self'",
+      "manifest-src 'self'",
       "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com",
       "font-src 'self' https://fonts.gstatic.com data:",
       "img-src 'self' data: https:",

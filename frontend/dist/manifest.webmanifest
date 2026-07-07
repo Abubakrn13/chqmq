@@ -1,0 +1,53 @@
+{
+  "name": "Chaqmoq — Do'kon POS",
+  "short_name": "Chaqmoq",
+  "description": "Offline-first POS va do'kon avtomatlashtirish tizimi",
+  "start_url": "/panel",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#063139",
+  "theme_color": "#0F6E78",
+  "lang": "uz",
+  "dir": "ltr",
+  "categories": ["business", "productivity", "finance"],
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any"
+    },
+    {
+      "src": "/icon-maskable-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/icon-maskable-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Sotish",
+      "short_name": "Sotish",
+      "description": "Yangi chek boshlash",
+      "url": "/panel/sell"
+    },
+    {
+      "name": "Bugungi sotuvlar",
+      "short_name": "Bugun",
+      "url": "/panel/today"
+    }
+  ]
+}

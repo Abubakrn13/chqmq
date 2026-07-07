@@ -28,6 +28,8 @@ import Reorder from "./pages/Reorder.jsx";
 import Targets from "./pages/Targets.jsx";
 import Onboarding from "./pages/Onboarding.jsx";
 import RoleGuard from "./components/RoleGuard.jsx";
+import InstallPrompt from "./components/InstallPrompt.jsx";
+import OfflineBanner from "./components/OfflineBanner.jsx";
 import Settings from "./pages/Settings.jsx";
 import SuperAdmin from "./pages/SuperAdmin.jsx";
 
@@ -42,7 +44,10 @@ function Protected({ children, role }) {
 
 export default function App() {
   return (
-    <Routes>
+    <>
+      <OfflineBanner />
+      <InstallPrompt />
+      <Routes>
       <Route path="/" element={<Landing />} />
       <Route path="/login" element={<Login />} />
       <Route
@@ -90,5 +95,6 @@ export default function App() {
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
+    </>
   );
 }
